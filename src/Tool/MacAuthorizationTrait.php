@@ -32,7 +32,7 @@ trait MacAuthorizationTrait
     // AbstractProvider
     abstract protected function getRandomState($length);
 
-    protected function getAuthorizationHeaders($token = null)
+    protected function getAuthorizationHeaders(AccessToken $token = null)
     {
         // This is currently untested and provided only as an example. If you
         // complete the implementation, please create a pull request for
