@@ -71,7 +71,7 @@ class GenericProvider extends AbstractProvider
      */
     private $responseResourceOwnerId = 'id';
 
-    public function __construct($options = [], array $collaborators = [])
+    public function __construct(array $options = [], array $collaborators = [])
     {
         $this->assertRequiredOptions($options);
 
