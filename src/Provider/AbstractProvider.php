@@ -553,11 +553,10 @@ abstract class AbstractProvider
     protected function sendRequest(RequestInterface $request)
     {
         try {
-            $response = $this->getHttpClient()->send($request);
+            return $this->getHttpClient()->send($request);
         } catch (BadResponseException $e) {
-            $response = $e->getResponse();
+            return $e->getResponse();
         }
-        return $response;
     }
 
     /**
